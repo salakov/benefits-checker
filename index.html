@@ -1,86 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Benefit Eligibility Checker</title>
+  <title>Canada's Dental Benefits Checker</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="container">
-    <div class="logo">
-        <a href="https://www.hellodent.com">
-          <img src="https://www.hellodent.com/images/2856/images/hellodent-logo.svg" alt="HelloDent Logo" class="logo-image">
-        </a>
-    </div>
-    <h1 class="title">Benefit Eligibility Checker</h1>
-
-    <form id="eligibility-form">
-      <div class="form-group">
+    <img src="https://www.hellodent.com/images/2856/images/hellodent-logo.svg" alt="HelloDent Logo" class="logo">
+    <h1>Canada's Public Dental Benefits Checker</h1>
+    <div class="checker">
+      <h2>Fill out patinet's information</h2>
+      <div class="input-group">
         <label for="age">Age:</label>
-        <div class="input-field">
-          <span> </span>
-          <input type="number" id="age" required>
-        </div>
+        <input type="number" id="age" min="0" placeholder="Enter your age">
       </div>
-
-      <div class="form-group">
+      <div class="input-group">
         <label for="province">Province:</label>
-        <select id="province" required>
+        <select id="province">
+          <option value="">Select your province</option>
           <option value="Ontario">Ontario</option>
+          <option value="British Columbia">British Columbia</option>
+          <option value="Nova Scotia">Nova Scotia</option>
         </select>
       </div>
-
-      <div class="form-group">
+      <div class="input-group">
         <label for="income">Family Income:</label>
-        <div class="input-field">
-          <span>$</span>
-          <input type="number" id="income" required>
-        </div>
+        <input type="number" id="income" min="0" placeholder="Enter your family income">
       </div>
-
-      <button type="submit">Check Eligibility</button>
-    </form>
-
-    <div id="result" class="hidden"></div>
-
-    <br> <br>
-    <div class="article">
-        <h2 class="article-title">Dental Benefits in Canada: Ensuring Oral Health for All</h2>
-      
-        <p>Dental care plays a vital role in maintaining overall health and well-being. In Canada, various government-funded dental benefit programs aim to provide access to essential oral healthcare services for eligible individuals. These programs offer financial assistance based on factors such as age, province of residence, and income level. In this article, we will explore some of the key dental benefit programs available in Canada and how they help ensure that everyone has access to quality dental care.</p>
-      
-        <h3>1. Canada Dental Benefits</h3>
-      
-        <p>The Canada Dental Benefits program is specifically designed for children under 12 years old residing in Ontario, whose family income falls below $90,000. This program aims to promote dental health among children by providing financial assistance for essential dental treatments. Through this program, eligible children can receive coverage for routine check-ups, preventive treatments, and necessary dental procedures. By focusing on early dental care, Canada Dental Benefits program aims to foster healthy oral habits and prevent dental issues in the long run.</p>
-      
-        <h3>2. Healthy Smile Ontario</h3>
-      
-        <p>Healthy Smile Ontario is another government-funded dental benefit program available in Ontario. This program targets children under 17 years old with a family income below $24,930. It offers comprehensive dental coverage to ensure that children receive the necessary oral healthcare services they need. From regular cleanings and examinations to more complex treatments, Healthy Smile Ontario provides a range of dental services to eligible children. By removing financial barriers, this program promotes equitable access to dental care, helping children maintain optimal oral health.</p>
-      
-        <h3>3. Ontario Seniors Dental Care Program</h3>
-      
-        <p>As individuals age, their dental care needs often change. Recognizing this, the Ontario Seniors Dental Care Program focuses on providing dental benefits to seniors aged 65 and older residing in Ontario. This program aims to address the unique oral health challenges faced by seniors by offering coverage for essential dental services. From denture care to oral surgery, eligible seniors can access a wide range of dental treatments under this program. By supporting seniors' oral health, the Ontario Seniors Dental Care Program contributes to their overall well-being and quality of life.</p>
-      
-        <p>It is important to note that eligibility for these dental benefit programs is determined based on specific criteria, including age, province of residence, and income level. To determine whether you or your family members are eligible for these programs, it is advisable to consult the relevant resources provided by the government.</p>
-      
-        <p>Based on your responses, you may be eligible for the following program(s):</p>
-        <ul>
-          <li>Canada Dental Benefits</li>
-          <li>Healthy Smile Ontario</li>
-          <li>Ontario Seniors Dental Care Program</li>
-        </ul>
-      
-        <p>Please reference the relevant resources to confirm your eligibility and learn more about the benefits and services offered by these programs.</p>
-      
-        <p>In conclusion, dental benefit programs in Canada play a crucial role in ensuring that individuals of all ages have access to essential oral healthcare services. By addressing financial barriers, these programs promote oral health and contribute to overall well-being. If you or your loved ones meet the eligibility criteria, it is highly recommended to explore these programs and take advantage of the dental benefits they provide.</p>
+      <div class="input-group">
+        <h3>Check all that apply:</h3>
+        <label for="indigenous"><input type="checkbox" id="indigenous"> Indigenous</label>
+        <label for="veteran"><input type="checkbox" id="veteran"> Veteran</label>
+        <label for="disability"><input type="checkbox" id="disability"> Disability</label>
+        <label for="refugee"><input type="checkbox" id="refugee"> Refugee</label>
       </div>
-      
-    <div class="logo">
-      <a href="https://www.hellodent.com">
-        <img src="https://www.hellodent.com/images/2856/images/hellodent-logo.svg" alt="HelloDent Logo" class="logo-image">
-      </a>
+      <button onclick="checkEligibility()">Check Eligibility</button>
+      <p id="result"></p>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
