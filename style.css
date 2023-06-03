@@ -20,6 +20,7 @@ body {
 h1 {
   text-align: center;
   margin-top: 20px;
+  font-size: 1.8em;
 }
 
 .checker {
@@ -40,6 +41,7 @@ h1 {
 label {
   display: block;
   margin-bottom: 5px;
+  font-size: 1.2em;
 }
 
 input[type="number"],
@@ -59,8 +61,29 @@ button {
   border-radius: 25px;
   display: block;
   margin: 0 auto;
+  
 }
 
 button:hover {
   opacity: 0.8;
+}
+
+/* Adjust overall size and spacing */
+main {
+  max-width: 600px; /* Set a maximum width for the content */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 20px; /* Add padding for spacing */
+}
+
+
+/* Make the checkbox and label responsive */
+.check-option {
+  transform: scale(1.2);
+}
+
+
+
+/* Adjust spacing between list items */
+li {
+  margin-bottom: 10px;
 }
