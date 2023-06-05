@@ -59,4 +59,7 @@ function checkEligibility() {
     result.innerHTML = 'You may not be eligible for any specific dental benefits.';
     ctaContainer.innerHTML = '';
   }
+
+  var checkButton = document.getElementById('checkButton');
+  checkButton.style.backgroundColor = 'grey';
 }

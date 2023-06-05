@@ -25,15 +25,15 @@ h1 {
 
 .checker {
   background-color: #ffffff;
-  
   border-radius: 5px;
   padding: 20px;
   margin-top: 20px;
-  width: 400px; /* Set a fixed width for the checker element */
-  margin: 0 auto; /* Center the checker element horizontally */
-  box-sizing: border-box; /* Include padding and border in the element's total width */
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add the shadow effect */
+  width: 400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
+
 .input-group {
   margin-bottom: 15px;
 }
@@ -67,11 +67,16 @@ button:hover {
   opacity: 0.8;
 }
 
+button.disabled {
+  background-color: #808080;
+  cursor: not-allowed;
+}
+
 /* Adjust overall size and spacing */
 main {
-  max-width: 600px; /* Set a maximum width for the content */
-  margin: 0 auto; /* Center the content horizontally */
-  padding: 20px; /* Add padding for spacing */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Make the checkbox and label responsive */
@@ -83,6 +88,7 @@ main {
 li {
   margin-bottom: 10px;
 }
+
 .cta-button {
   background-color: #ff9100;
   color: #ffffff;
