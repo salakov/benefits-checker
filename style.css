@@ -25,15 +25,15 @@ h1 {
 
 .checker {
   background-color: #ffffff;
-  border: 2px solid #009065;
+  
   border-radius: 5px;
   padding: 20px;
   margin-top: 20px;
   width: 400px; /* Set a fixed width for the checker element */
   margin: 0 auto; /* Center the checker element horizontally */
   box-sizing: border-box; /* Include padding and border in the element's total width */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add the shadow effect */
 }
-
 .input-group {
   margin-bottom: 15px;
 }
