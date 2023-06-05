@@ -54,7 +54,7 @@ function checkEligibility() {
 
   if (eligiblePrograms.length > 0) {
     result.innerHTML = 'You may be eligible for the following dental benefits:<br>' + eligiblePrograms.join('<br>');
-    ctaContainer.innerHTML = '<button class="cta-button">Schedule an Appointment</button>';
+    ctaContainer.innerHTML = '<button class="cta-button"><a href="https://www.hellodent.com/site/home" style="color: white; text-decoration: none;">Schedule an Appointment</a></button>';
   } else {
     result.innerHTML = 'You may not be eligible for any specific dental benefits.';
     ctaContainer.innerHTML = '';
